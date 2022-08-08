@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace WPFLibrary
 {
@@ -20,9 +7,23 @@ namespace WPFLibrary
     /// </summary>
     public partial class MainWindow : Window
     {
+        ikkoClass ikkoClass = new ikkoClass();
         public MainWindow()
         {
             InitializeComponent();
+            ikkoClass = new ikkoClass();
+            KeywordClass k = ikkoClass.AddNewKeyword("Select");
+            k.Pattern = "Select * from [tablename] into table @data([inlineitab]) where [where].";
+        }
+
+        private void btn_Read_Click(object sender, RoutedEventArgs e)
+        {
+            ikkoClass.ReadFile();
+        }
+
+        private void btn_Write_Click(object sender, RoutedEventArgs e)
+        {
+            ikkoClass.WriteToFile();
         }
     }
 }

@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Button x:Name="btn_Read" Content="Read" Height="50" Margin="644,10,0,0" Click="btn_Read_Click" VerticalAlignment="Top" d:LayoutOverrides="Height" HorizontalAlignment="Left" Width="105"/>
+        <Button x:Name="btn_Write" Content="Write" Height="50" Margin="644,65,0,0" Click="btn_Write_Click" HorizontalAlignment="Left" Width="105" VerticalAlignment="Top" d:LayoutOverrides="Height"/>
 
     </Grid>
 </Window>
